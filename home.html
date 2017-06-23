@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="2465/css/style.css">
+    <link rel="stylesheet" href="2465/css/css.css">
+    <link href="test/css-social-buttons/social-buttons.css" rel="stylesheet">
+  </head>
+
+
+
+
+
+
+    <style>
+
+    body #p {
+    	background: #fff;
+    	font: 14px/140% Arial, Helvetica, sans-serif;
+    	color: #666;
+    	width: 800px;
+    	max-width: 80%;
+    	margin: 30px auto;
+    }
+
+
+
+    .grid {
+    	position: relative;
+    	clear: both;
+    	margin: 0 auto;
+    	padding: 1em 0 4em;
+    	max-width: 1000px;
+    	list-style: none;
+    	text-align: center;
+    }
+
+.kongbai1{
+  width: 100%;
+  height: 120px;
+}
+
+
+.title{
+text-align: center;
+
+}
+.kongbai2{
+          width: 100%;
+          height: 160px;
+}
+
+
+    /* Common style */
+    .grid figure {
+    	position: relative;
+    	float: left;
+    	overflow: hidden;
+    	margin: 10px 1%;
+    	min-width: 320px;
+    	max-width: 480px;
+    	max-height: 360px;
+    	width: 48%;
+    	height: 500px;
+    	background: #3085a3;
+    	text-align: center;
+    	cursor: pointer;
+    }
+
+    .grid figure img {
+    	position: relative;
+    	display: block;
+    	min-height: 100%;
+    	max-width: 100%;
+    	opacity: 0.8;
+    }
+
+    .grid figure figcaption {
+    	padding: 2em;
+    	color: #fff;
+    	text-transform: uppercase;
+    	font-size: 1.25em;
+    	-webkit-backface-visibility: hidden;
+    	backface-visibility: hidden;
+    }
+
+    .grid figure figcaption::before,
+    .grid figure figcaption::after {
+    	pointer-events: none;
+    }
+
+    .grid figure figcaption,
+    .grid figure figcaption > a {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    }
+
+
+    /*-----------------*/
+    /***** Apollo *****/
+    /*-----------------*/
+
+    figure.effect-apollo {
+    	background: #3498db;
+    }
+
+    figure.effect-apollo img {
+    	opacity: 1;
+    	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    	transition: opacity 0.35s, transform 0.35s;
+    	-webkit-transform: scale3d(1.05,1.05,1);
+    	transform: scale3d(1.05,1.05,1);
+    }
+
+    figure.effect-apollo figcaption::before {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    	background: rgba(255,255,255,0.5);
+    	content: '';
+    	-webkit-transition: -webkit-transform 0.6s;
+    	transition: transform 0.6s;
+    	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+    	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+    }
+
+    figure.effect-apollo p {
+    	position: absolute;
+    	right: 0;
+    	bottom: 0;
+    	margin: 3em;
+    	padding: 0 1em;
+    	max-width: 150px;
+    	border-right: 4px solid #fff;
+    	text-align: right;
+    	opacity: 0;
+    	-webkit-transition: opacity 0.35s;
+    	transition: opacity 0.35s;
+    }
+
+    figure.effect-apollo h2 {
+    	text-align: left;
+    }
+
+    figure.effect-apollo:hover img {
+    	opacity: 0.6;
+    	-webkit-transform: scale3d(1,1,1);
+    	transform: scale3d(1,1,1);
+    }
+
+    figure.effect-apollo:hover figcaption::before {
+    	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+    	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+    }
+
+    figure.effect-apollo:hover p {
+    	opacity: 1;
+    	-webkit-transition-delay: 0.1s;
+    	transition-delay: 0.1s;
+    }
+
+
+
+
+body .p{
+  font: 14px/140% Arial, Helvetica, sans-serif;
+	color: #666;
+	width: 800px;
+	max-width: 80%;
+	margin: 30px auto;
+}
+
+
+    @font-face {
+    	font-weight: normal;
+    	font-style: normal;
+    	font-family: 'codropsicons';
+    	src:url('../fonts/codropsicons/codropsicons.eot');
+    	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+    		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+    		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+    		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+    }
+
+    *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+    .clearfix:before, .clearfix:after { display: table; content: ''; }
+    .clearfix:after { clear: both; }
+
+    body {
+    	background: #222;
+    	color: #fff;
+    	font-weight: 400;
+    	font-size: 1em;
+    	font-family: 'Raleway', Arial, sans-serif;
+    }
+
+    a {
+    	outline: none;
+    	color: #3498db;
+    	text-decoration: none;
+    }
+
+    a:hover, a:focus {
+    	color: #528cb3;
+    }
+
+    section {
+    	padding: 1em;
+    	text-align: center;
+    }
+
+    .content {
+    	margin: 0 auto;
+    	max-width: 1000px;
+    }
+
+    .content > h2 {
+    	clear: both;
+    	margin: 0;
+    	padding: 4em 1% 0;
+    	color: #484B54;
+    	font-weight: 800;
+    	font-size: 1.5em;
+    }
+
+    .content > h2:first-child {
+    	padding-top: 0em;
+    }
+
+    /* Header */
+    .codrops-header {
+    	margin: 0 auto;
+    	padding: 4em 1em;
+    	text-align: center;
+    }
+
+    .codrops-header h1 {
+    	margin: 0;
+    	font-weight: 800;
+    	font-size: 4em;
+    	line-height: 1.3;
+    }
+
+    .codrops-header h1 span {
+    	display: block;
+    	padding: 0 0 0.6em 0.1em;
+    	color: #74777b;
+    	font-weight: 300;
+    	font-size: 45%;
+    }
+
+
+
+    /* To Navigation Style */
+    .codrops-top {
+    	width: 100%;
+    	text-transform: uppercase;
+    	font-weight: 800;
+    	font-size: 0.69em;
+    	line-height: 2.2;
+    }
+
+    .codrops-top a {
+    	display: inline-block;
+    	padding: 1em 2em;
+    	text-decoration: none;
+    	letter-spacing: 1px;
+    }
+
+    .codrops-top span.right {
+    	float: right;
+    }
+
+    .codrops-top span.right a {
+    	display: block;
+    	float: left;
+    }
+
+    .codrops-icon:before {
+    	margin: 0 4px;
+    	text-transform: none;
+    	font-weight: normal;
+    	font-style: normal;
+    	font-variant: normal;
+    	font-family: 'codropsicons';
+    	line-height: 1;
+    	speak: none;
+    	-webkit-font-smoothing: antialiased;
+    }
+
+    .codrops-icon-drop:before {
+    	content: "\e001";
+    }
+
+    .codrops-icon-prev:before {
+    	content: "\e004";
+    }
+
+    /* Related demos */
+    .related {
+    	clear: both;
+    	padding: 6em 1em;
+    	font-size: 120%;
+    }
+
+    .related > a {
+    	display: inline-block;
+    	margin: 20px 10px;
+    	padding: 25px;
+    	border: 1px solid #4f7f90;
+    	text-align: center;
+    }
+
+    .related a:hover {
+    	border-color: #39545e;
+    }
+
+    .related a img {
+    	max-width: 100%;
+    	opacity: 0.8;
+    }
+
+    .related a:hover img,
+    .related a:active img {
+    	opacity: 1;
+    }
+
+    .related a h3 {
+    	margin: 0;
+    	padding: 0.5em 0 0.3em;
+    	max-width: 300px;
+    	text-align: left;
+    }
+
+    /* Demo ad design */
+    body #cdawrap {
+    	background: none;
+    	top: 50px;
+    	border: none;
+    }
+
+    body #cdawrap a {
+    	color: #fff !important;
+    }
+
+    body #cda-remove {
+    	color: #fff;
+    }
+
+    @media screen and (max-width: 25em) {
+    	.codrops-header {
+    		font-size: 75%;
+    	}
+    	.codrops-icon span {
+    		display: none;
+    	}
+    }
+
+
+
+
+
+
+
+
+    </style>
+
+
+<div class="content">
+
+
+<div class="kongbai1"></div>
+<button>
+  <span class="shadow">
+    <span class="vert">
+      <span class="floating">
+        <span class="front"><a href="about.html">ABOUT CARPOOL</a></span>
+
+      </span>
+    </span>
+  </span>
+</button>
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+<button>
+  <span class="shadow">
+    <span class="vert">
+      <span class="floating">
+        <span class="front"><a href="login.html">LOG OUT</a></span>
+
+      </span>
+    </span>
+  </span>
+</button>
+
+
+
+
+				<div class="grid">
+					<figure class="effect-apollo">
+						<img src="carpoolchat.jpg" alt="img18"/>
+						<figcaption>
+							<h2>GO <span>WITH ME?</span></h2>
+              <a href="yourlocation"></a>
+						</figcaption>
+					</figure>
+					<figure class="effect-apollo">
+						<img src="shapeline.jpg" alt="img22"/>
+						<figcaption>
+							<h2>Mood <span>Map</span></h2>
+							<a href="moodmap"></a>
+						</figcaption>
+					</figure>
+				</div>
+
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      </br>
+
+        <p style="margin: 0 0 15px;">
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp
+
+
+        	<a href="#" class="sb thick-border twitter">Twitter</a>
+        	<a href="https://www.facebook.com/carpoolnz101/?ref=bookmarks" class="sb thick-border facebook">Facebook</a>
+        	<a href="#" class="sb thick-border heart">Heart</a>
+        	<a href="#" class="sb thick-border linkedin">LinkedIn</a>
+        	<a href="#" class="sb thick-border pinterest">Pinterest</a>
+        	<a href="#" class="sb thick-border podcast">Podcast</a>
+        	<a href="#" class="sb thick-border rss">RSS</a>
+        	<a href="#" class="sb thick-border share_this">Share</a>
+        	<a href="#" class="sb thick-border star">Star</a>
+        	<a href="#" class="sb thick-border vimeo">Vimeo</a>
+        </p>
+			</div>
+</div>
+
+      </html>

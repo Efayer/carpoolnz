@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MoodMap</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <style>
+
+       #shang{
+
+       height: 25%;
+       width: 100%;
+text-align: center;
+       background-color: #222;
+
+       }
+
+
+
+
+
+#zuo{
+
+height: 70%;
+width: 5%;
+float:  left;
+background-color: #9966CC;
+
+}
+
+
+      #map {
+        height: 70%;
+        width: 90%;
+display:inline-block;
+
+      }
+
+
+      #you{
+
+      height: 70%;
+      width: 5%;
+      float: right;
+      background-color: #B32134;
+
+      }
+
+      #xia{
+
+      height: 5%;
+      width: 100%;
+
+      background-color: #00C4B0;
+
+      }
+
+
+
+
+
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0 ;
+        padding: 0;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+
+
+
+
+
+
+    <div id="shang">
+
+
+
+
+    <span id="title"><h1 style="text-align: center; color: white"></br></br>DRAW YOUR MOOD</h1><a href="Home.html"><img src="login/images/group.png" alt=""/></a></span>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+    <div id="zuo" style="text-align: center; color: white;"><h1></br></br></br></br></br></br>S</br>A</br>D</h1></div>
+    <div id="map"></div>
+    <div id="you" style="text-align: center; color: white;"><h1></br></br></br></br></br>A</br>N</br>G</br>R</br>Y</h1></div>
+    <div id="xia" style="text-align: center; color: white;"><h1>HAPPY</h1></div>
+
+    <script>
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -41, lng: 174},
+          zoom: 8
+        });
+
+        var drawingManager = new google.maps.drawing.DrawingManager({
+          drawingMode: google.maps.drawing.OverlayType.MARKER,
+          drawingControl: true,
+          drawingControlOptions: {
+            position: google.maps.ControlPosition.BOTTOM_CENTER,
+            drawingModes: ['circle', 'polyline', 'rectangle', 'polygon']
+          },
+
+          rectangleOptions: {
+            fillColor: '#9966CC',
+            fillOpacity: 1,
+            strokeWeight: 5,
+            clickable: true,
+            editable: true,
+            zIndex: 1
+          }
+          ,
+          circleOptions: {
+            fillColor: '#00C4B0',
+            fillOpacity: 1,
+            strokeWeight: 5,
+            clickable: true,
+            editable: true,
+            zIndex: 1
+          }
+          ,
+          polygonOptions: {
+            fillColor: '#B32134',
+            fillOpacity: 1,
+            strokeWeight: 5,
+            clickable: true,
+            editable: true,
+            zIndex: 1
+          }
+
+
+        });
+        drawingManager.setMap(map);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFvi3fjpHKJ_BsRqQPS3QFpXsx_8sNp18&libraries=drawing&callback=initMap"
+         async defer></script>
+  </body>
+</html>

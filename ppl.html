@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>ppindex</title>
+<link href="ppl/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<script src="ppl/js/jquery.min.js"></script>
+<link href="ppl/css/style.css" rel='stylesheet' type='text/css' />
+
+
+<script>
+ function C() {
+     var nickname = document.getElementById("nickname").value;
+     var input = document.getElementById("com").value;
+
+     var table = document.getElementById("table");
+     var tr = document.createElement("tr");
+
+     var Nickname = document.createElement("td");
+     Nickname.innerText = nickname;
+     tr.appendChild(Nickname);
+
+     var Com = document.createElement("td");
+     Com.innerText = input;
+     tr.appendChild(Com);
+
+     table.tBodies[0].appendChild(tr);
+
+ }
+
+     function outputStar(){
+       var starDiv = document.getElementById("star_div");
+       starDiv.innerHTML += "&nbsp;*";
+     }
+
+     function outputLineBreak(){
+       var starDiv = document.getElementById("star_div");
+       starDiv.innerHTML += "<br />";
+     }
+
+     function freeHandTwo(){
+       var nums = new Array();
+       var a = parseFloat(window.prompt("Enter first line", "-1"));
+       while (a != -1){
+         nums.push(a);
+         a = parseFloat(window.prompt("Enter next line", "-1"));
+       }
+
+       for(var line = 0; line < nums.length; line++){
+         var n = nums[line];
+         for (column = 0; column < n; column++){
+           outputStar();
+         }
+         outputLineBreak();
+       }
+     }
+     </script>
+</head>
+	<body>
+
+			<div id="home" class="header">
+				<div class="container">
+
+				<div class="top-header">
+
+					<div class="top-nav">
+					<div class="navigation">
+
+
+								<script>
+								   $( "span.menu" ).click(function() {
+									 $( "ul.nav1" ).slideToggle( 300, function() {
+
+									  });
+									 });
+								</script>
+
+					</div>
+					<div class="clearfix"></div>
+          <span><a href="home.html"><img src="login/images/group.png"/></a></span>
+				</div>
+
+
+				</div>
+			<div class="banner-info">
+				<div class="col-md-7 header-right">
+					<h1>Hello!</h1>
+					<ul class="address">
+
+					<li>
+							<ul class="address-text">
+								<li><b>NAME</b></li>
+								<li>ABC ABCD</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>D.O.B</b></li>
+								<li>01-01-1900</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>PHONE </b></li>
+								<li>021 111 2222</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>ADDRESS </b></li>
+								<li>123 GOOD ST,WELLINGTON.</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>E-MAIL </b></li>
+								<li><a href="mailto:example@mail.com"> mail@example.com</a></li>
+							</ul>
+						</li>
+
+					</ul>
+				</div>
+				<div class="col-md-5 header-left">
+
+				</div>
+				<div class="clearfix"> </div>
+
+		      </div>
+			</div>
+		</div>
+	</div>
+			<!-- about -->
+			<div id="about" class="about">
+				<div class="col-md-6 about-left">
+					<div id="owl-demo1" class="owl-carousel owl-carousel2">
+					                <div class="item">
+					                	<div class="about-left-grid">
+											<h2>Hi! I'm <span>ABC ABCD</span></h2>
+											<p></p>
+
+										</div>
+					                </div>
+					                  <div class="item">
+					                	<div class="about-left-grid">
+
+
+                              <table style="text-align: center; font-family: 'Courier New', Courier, monospace" id="table">
+                                  <tbody>
+                                  </tbody>
+                              </table>
+
+                              <div id="star_div" style="text-align: center; font-family: 'Courier New', Courier, monospace">
+
+                              </div>
+
+
+
+                              <p style="text-align: center; font-family: 'Courier New', Courier, monospace; ">
+                                  Nickname: <input id="nickname" type="text"/><br />
+                                </br>
+                                  <textarea id="com"></textarea>
+                                </br>
+                                  <input id="input" type="button" value="Comment" onclick="C()"/>
+
+
+
+
+                                  <input type="button" value="good or bad" onclick="freeHandTwo();" />
+                                  <a href="distance"><button>Go with him/her</button></a>
+                                  <br></br>
+
+                              </p>
+                              <tbody style="text-align: center; font-family: 'Courier New', Courier, monospace">
+                              </tbody>
+										</div>
+					                </div>
+
+					</div>
+				</div>
+				<div class="col-md-6 about-right">
+
+				</div>
+				<div class="clearfix"> </div>
+							<link href="ppl/css/owl.carousel.css" rel="stylesheet">
+							    <script src="ppl/js/owl.carousel.js"></script>
+			<script>
+				$(document).ready(function() {
+					$("#owl-demo1").owlCarousel({
+						items : 1,
+						lazyLoad : false,
+						autoPlay : true,
+						navigation : false,
+						navigationText :  false,
+						pagination : true,
+					});
+				});
+			</script>
+
+
+			</div>
+	
+
+
+	</body>
+</html>
